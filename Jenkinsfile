@@ -8,12 +8,12 @@ pipeline {
         }
         stage('编译') {
             steps {
-                sh 'gcc main.c -o main_app'
+                bat 'gcc main.c -o main_app'
             }
         }
         stage('运行') {
             steps {
-                sh './main_app'
+                bat './main_app'
             }
         }
     }
