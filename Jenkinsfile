@@ -46,7 +46,7 @@ pipeline {
 
                         stage("编译构建") {
                             echo "===== 执行编译流程 ====="
-                            bat "gcc src\main.c -o main.exe"
+                            bat "gcc src/main.c -o main.exe"
                             // Windows构建使用bat命令
                             // bat "build.bat"
                         }
