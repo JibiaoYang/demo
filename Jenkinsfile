@@ -46,11 +46,13 @@ pipeline {
 
                         stage("编译构建") {
                             echo "===== 执行编译流程 ====="
+                            gcc src/main.c -o main.exe
                             // Windows构建使用bat命令
                             // bat "build.bat"
                         }
                         stage("功能测试") {
                             echo "===== 执行测试流程 ====="
+                            main.exe
                             // bat "test.bat"
                         }
                     }
