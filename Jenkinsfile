@@ -7,7 +7,7 @@ pipeline {
     }
     stages {
         stage("架构分支信息确认") {
-            agent { label "Built-In Node" }
+            agent { label 'built-in' }
             steps {
                 echo "======================================"
                 echo "选定架构: ${params.BUILD_ARCH}"
